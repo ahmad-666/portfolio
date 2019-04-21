@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html,body{height: 100%;}
+*:focus{outline: none ;}
+@font-face{
+    src: url('../assets/fonts/azonix.otf') ;
+    font-family : azonix ;
+}
+@font-face{
+    src: url('../assets/fonts/AROLY.ttf') ;
+    font-family : aroly ;
+}
+@font-face{
+    src: url('../assets/fonts/moon.otf') ;
+    font-family : moon ;
+}

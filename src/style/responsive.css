@@ -1,0 +1,33 @@
+@media screen and (max-width:1800px){
+    .perspective .my-work{     
+        transform: rotateX(45deg) rotateZ(35deg) translateX(10vw) translateY(-10vh) ;
+    }
+}
+@media screen and (max-width:1300px){
+    .perspective .my-work{     
+        transform: rotateX(45deg) rotateZ(30deg) translateX(10vw) translateY(-10vh) ;
+    }
+}
+@media screen and (max-width:900px){
+    .perspective .my-work{     
+        transform: rotateX(45deg) rotateZ(25deg) translateX(10vw) translateY(-10vh) ;
+    }
+} 
+@media screen and (max-width:600px){
+    .perspective .my-work{     
+        transform: rotateX(45deg) rotateZ(20deg) translateX(10vw) translateY(-10vh) ;
+    }
+} 
+@media screen and (max-width:1200px){
+    html,body{font-size: 15px;}
+    .landing .vertical-text{top: 25%}
+}
+@media screen and (max-width:900px){
+    html,body{font-size: 10px;}
+    .landing .vertical-text .txt-wrapper{font-size: 1.2em;}
+}
+@media screen and (max-width:600px){
+    html,body{font-size: 7px;}
+    .landing .vertical-text{top: 27%}
+    .landing .vertical-text .txt-wrapper{font-size: 1.5em;}
+}

@@ -1,0 +1,65 @@
+.perspective{
+    width: 100vw ;
+    height: 100vh;
+    background-image: linear-gradient(to left bottom, #32394b, #41485a, #515769, #616778, #717788);
+    overflow: hidden;
+    position: relative ;
+}
+.perspective .my-work{
+    width: 80%;
+    height: 100%;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: center ;
+    align-items: center ;
+    flex-wrap: wrap ;
+    align-content: flex-start ;
+    transform-style: preserve-3d ;
+    transform: rotateX(45deg) rotateZ(35deg) translateX(20vw) translateY(-20vh) ;
+    overflow: visible ;
+}
+.perspective .my-work .proj{
+    display: inline-block ;
+    width: 28% ;
+    height: 25%;
+    margin: 1em;
+    position: relative ; 
+}
+.perspective .my-work .proj *{position: absolute;}
+.perspective .my-work .proj img{
+    width: 100% ;
+    height: 100%;
+    transition: all .4s ease-in-out ;
+}
+.perspective .my-work .proj .layer{
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    transition: all .4s ease-in-out ;
+}
+.perspective .my-work .proj .layer:nth-child(2){
+    z-index: -1 ;
+    background-color: #5debb4;
+}
+.perspective .my-work .proj .layer:nth-child(3){
+    z-index: -2;
+    background-color: #5db4eb ;
+}
+.perspective .my-work .proj .layer:nth-child(4){
+    z-index: -3;
+    background-color: #ac5cf5 ;
+}
+.perspective .my-work .proj:hover img{transform: translateZ(10vmin) ;}
+.perspective .my-work .proj:hover .layer:nth-child(2){transform: translateZ(6vmin) ;}
+.perspective .my-work .proj:hover .layer:nth-child(3){transform: translateZ(4vmin) ;}
+.perspective .my-work .proj:hover .layer:nth-child(4){transform: translateZ(2vmin) ;}
+.perspective span:nth-child(1){
+    font-size : 3em ;
+    color: rgb(240,240,240);
+    text-transform: uppercase ;
+    font-weight: thin ;
+    font-family: azonix ;
+    position: absolute ;
+    left: 2%;
+    top: 5%
+}

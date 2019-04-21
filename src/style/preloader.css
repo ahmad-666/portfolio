@@ -1,0 +1,30 @@
+.fade-in{
+    opacity: 1 !important;
+    transition: opacity .6s linear ;
+}
+.fade-out{
+    opacity: 0 !important;
+    transition: opacity .6s linear ;
+}
+.loader{
+    width: 100vw ;
+    height: 100vh;
+    position: fixed ;
+    z-index: 2 ;
+    background-color: #222 ;
+    overflow: hidden;
+}
+.loader .track{
+    width: 0% ;
+    height: .2em;
+    background-color: silver ;
+    position: absolute ;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%) ;
+    transition: width .5s ease-in-out ;
+}
+.body{
+    display: none ;
+    opacity: 0;
+}
