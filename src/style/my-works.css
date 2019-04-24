@@ -24,6 +24,7 @@
     height: 25%;
     margin: 1em;
     position: relative ; 
+    transform-style: preserve-3d ;
 }
 .perspective .my-work .proj *{position: absolute;}
 .perspective .my-work .proj img{

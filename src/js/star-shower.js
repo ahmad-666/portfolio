@@ -1,3 +1,4 @@
+import is from 'is_js' ;
 //Init Canvas----------------------------------------------------
 let canvas = document.querySelector('.star-shower') ;
 canvas.width = window.innerWidth-3 ;
@@ -12,13 +13,13 @@ let starsParams = {
     colors: ['white','#6CFFFF'] ,
     sizes: [.25,.5,.75,1,1.5] ,
     number: 400 ,
-    shadowBlur: 15
+    shadowBlur: 3
 } ;
 //moon
 let moonParams = {
     size: Math.min(canvas.width,canvas.height)/10 ,
     color: 'white' ,
-    shadowBlur: 35 ,
+    shadowBlur: 20 ,
     shadowOffset: 10   
 };
 //planet
@@ -26,7 +27,7 @@ let planetParams = {
     size : Math.min(canvas.width,canvas.height)/2.5 ,
     color : '#090D1C' ,
     shadowColor : '#1F2B5C' , 
-    shadowBlur : 30 ,
+    shadowBlur : 15 ,
     shadowSize : 25 
 }
 //falling star 
@@ -34,7 +35,7 @@ let fallingStars = [] ;
 let fallingStarsParams = {
     sizes : [20,30,40,50] ,
     colors : ['white','#6CFFFF'] ,
-    shadowBlur : 35 ,
+    shadowBlur : 15 ,
     reductionRate : -10 , 
     vxMin : -4 ,
     vxMax : 4 ,
@@ -49,12 +50,19 @@ let impactForce = .8 ;
 let particlesParams = {
     number : 20 ,
     sizes : [.5,1,1.5] ,
-    shadowBlur : 15 ,
+    shadowBlur : 5,
     fadeSpeed : -.01 ,
     vxMin : -5 ,
     vxMax : 5 ,
     vyMin : -20 ,
     vyMax : -5 
+}
+if(is.edge() || is.ie() || is.firefox() || !is.desktop()) {
+	starsParams.shadowBlur = 0 ;
+	moonParams.shadowBlur = 10 ;
+	planetParams.shadowBlur = 10 ;
+	fallingStarsParams.shadowBlur = 5 ;
+	particlesParams.shadowBlur = 0 ;
 }
 //Utility Functions----------------------------------------------------
 let getRand = (min,max)=>Math.floor(Math.random()*(max-min+1)+min) ; 
