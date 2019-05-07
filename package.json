@@ -8,7 +8,7 @@
     "build": "parcel build index.html --public-url ./" ,
 	"deploy": "gh-pages -d dist"
   },
-  "homepage": "https://github.com/ahmad-666/portfolio.git" ,
+  "homepage": "https://ahmad-666.github.io/portfolio" ,
   "keywords": [],
   "author": "",
   "license": "ISC",
